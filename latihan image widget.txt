@@ -1,0 +1,30 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(title: Text("latihan image widget")),
+        body: Center(
+          child: Container(
+            width: 200,
+            height: 200,
+            padding: EdgeInsets.all(3),
+            child: Image(
+              image: NetworkImage(
+                  "https://upload.wikimedia.org/wikipedia/commons/5/51/IU_in_%22Love_Poem%22_Concert_in_Seoul_on_23rd_November_2019.jpg"),
+              fit: BoxFit.cover,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
